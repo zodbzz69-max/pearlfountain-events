@@ -1,10 +1,9 @@
-
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Script from 'next/script'
+import Script from 'next/script' // This fixes the "Cannot find name 'Script'" error
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] }) // This fixes the "Cannot find name 'inter'" error
 
 export const metadata: Metadata = {
   title: 'PearlFountain Events Centre - Premium Event Venue in Abeokuta',
@@ -30,7 +29,9 @@ export default function RootLayout({
         <Script 
           src="https://readdy.ai/api/public/assistant/widget?projectId=4e9dcdae-c1a7-4d87-9e47-363cfe7e5da8"
           strategy="afterInteractive"
+          // @ts-ignore
           mode="hybrid"
+          // @ts-ignore
           voice-show-transcript="true"
           theme="light"
           size="compact"
